@@ -66,6 +66,12 @@ passport.deserializeUser(function(obj, done) {
 });
 ```
 
-###Step 4: Make views
+###Step 4: Create viewer endpoint
+Now we're going to create an endpoint that returns the current logged in user's Facebook profile data.
 
-Let's create 
+####GET /me
+Create this route in your server.js that returns the user's Facebook profile data. The data is stored in `req.user` if you've set everything up correctly. Return a JSON representation of this data at the `/me` endpoint.
+
+Use Postman to verify that you can in fact get the JSON data from the `/me` endpoint.
+
+

@@ -39,9 +39,9 @@ passport.use(new FacebookStrategy({
   clientID: '<your_client_id>',
   clientSecret: '<your_client_secret>',
   callbackURL: 'http://localhost:3000/auth/facebook/callback'
-}), function(token, refreshToken, profile, done) {
+}, function(token, refreshToken, profile, done) {
   return done(null, profile);
-});
+}));
 ```
 
 ##Step 2: Define your auth endpoints

@@ -72,6 +72,6 @@ Now we're going to create an endpoint that returns the current logged in user's 
 ####GET /me
 Create this route in your server.js that returns the user's Facebook profile data. The data is stored in `req.user` if you've set everything up correctly. Return a JSON representation of this data at the `/me` endpoint.
 
-Use Postman to verify that you can in fact get the JSON data from the `/me` endpoint.
+Use Postman or the browser to verify that you can in fact get the JSON data from the `/me` endpoint.
 
 

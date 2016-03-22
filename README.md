@@ -75,3 +75,7 @@ Create this route in your server.js that returns the user's Facebook profile dat
 Use Postman or the browser to verify that you can in fact get the JSON data from the `/me` endpoint.
 
 
+
+## Copyright
+
+© DevMountain LLC, 2016. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.

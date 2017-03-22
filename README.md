@@ -3,12 +3,14 @@ FacebookViewer
 
 A mini-project to practice Passport/Node.js
 
-##Objectives
+## Objectives
+
 Create a simple app that shows Facebook Profile information.
 
 You can use the [passport-facebook](https://github.com/jaredhanson/passport-facebook) GitHub repo for a guide.
 
-##Step 1: Set up passport, passport-facebook, express
+## Step 1: Set up passport, passport-facebook, express
+
 Set up a server.js file and include these npm dependencies:
 * express
 * express-session
@@ -28,7 +30,7 @@ Now let's put in the code necessary to get our authentication working:
 
 `app.use(passport.initialize())`
 
-* Include the passport.session middleware 
+* Include the passport.session middleware
 
 `app.use(passport.session())`
 
@@ -44,37 +46,41 @@ passport.use(new FacebookStrategy({
 }));
 ```
 
-##Step 2: Define your auth endpoints
+## Step 2: Define your auth endpoints
+
 Create two routes that will handle your Facebook auth.
 
-####GET /auth/facebook
+#### GET /auth/facebook
+
 This route simply implements the passport.authenticate method, passing 'facebook' as the parameter.
 
-####GET /auth/facebook/callback
+#### GET /auth/facebook/callback
+
 This route needs to pass the passport.authenticate method again, except we also need to pass in an object that passes the successRedirect and failureRedirect paths.
 
-##Step 3: Create the deserialize/serializer methods on passport.
+## Step 3: Create the deserialize/serializer methods on passport.
+
 Since you won't be doing anything further than just passing objects to/from passport and the session, we just need bare bones methods here:
 
 ```
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
- 
+
 passport.deserializeUser(function(obj, done) {
   done(null, obj);
 });
 ```
 
-###Step 4: Create viewer endpoint
+### Step 4: Create viewer endpoint
+
 Now we're going to create an endpoint that returns the current logged in user's Facebook profile data.
 
-####GET /me
+#### GET /me
+
 Create this route in your server.js that returns the user's Facebook profile data. The data is stored in `req.user` if you've set everything up correctly. Return a JSON representation of this data at the `/me` endpoint.
 
 Use Postman or the browser to verify that you can in fact get the JSON data from the `/me` endpoint.
-
-
 
 ## Copyright
 

@@ -22,6 +22,10 @@ Go over to the [Facebook Developer Portal](https://developers.facebook.com/) and
 Now let's put in the code necessary to get our authentication working:
 * Create your express app, have it listen to a port that works for you
 * Require passport and the passport FacebookStrategy
+
+`const passport = require('passport')`
+`const FacebookStrategy = require('passport-facebook').Strategy`
+
 * Include the session middleware
 
 `app.use(session({secret: 'some-random-string'}))`
